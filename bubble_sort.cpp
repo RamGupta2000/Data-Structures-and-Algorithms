@@ -12,14 +12,15 @@ void bubblesort(vector<int> &v)
     for (int i = 0; i < v.size(); i++)
     {
         bool flag = true;
-        for (int j = i; j < v.size(); j++)
+        for (int j = 0; j < v.size() - i - 1; j++)
         {
-            if (v.at(i) > v.at(j))
+            if (v.at(j) > v.at(j + 1))
             {
-                swap(v.at(i), v.at(j));
+                swap(v.at(j), v.at(j + 1));
                 flag = false;
             }
         }
+
         if (flag)
         {
             return;
@@ -40,7 +41,7 @@ int main()
         cin >> x;
         v.push_back(x);
     }
-    
+
     bubblesort(v);
 
     for (auto i : v)
