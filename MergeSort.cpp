@@ -5,7 +5,7 @@ void Merge(vector<int> &v, int lb, int mid, int ub)
 {
     int i = lb;
     int j = mid + 1;
-    int k = 0;
+    int k = lb;
 
     vector<int> arr(v.size());
 
@@ -30,9 +30,9 @@ void Merge(vector<int> &v, int lb, int mid, int ub)
         arr[k++] = v[j++];
     }
 
-    for (int i = 0; i < k; i++)
+    for (int i = lb; i < k; i++)
     {
-        v[lb++] = arr[i];
+        v[i] = arr[i];
     }
 }
 
