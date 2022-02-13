@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// IN FIRST ITERATION SMALLEST ELEMENT WILL COME AT FIRST INDEX
-// IN SECOND ITERATION 2ND SMALLEST ELEMENT WILL COME AT SECOND INDEX and so on....
+// IN FIRST ITERATION GREATEST ELEMENT WILL COME AT LAST INDEX
+// IN SECOND ITERATION 2ND GREATEST ELEMENT WILL COME AT SECOND LAST INDEX and so on....
 
 // If the array gets sorted before the all the iterations i.e. no swapping is done, then the function
 // terminates
