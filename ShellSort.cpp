@@ -9,7 +9,7 @@ void ShellSort(vector<int> &v)
     {
         for (int j = gap; j < n; j += gap)
         {
-            for (int i = j - gap; i >= 0; i--)
+            for (int i = j - gap; i >= 0; i-=gap)
             {
                 if (v.at(i + gap) > v.at(i))
                 {
