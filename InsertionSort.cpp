@@ -44,3 +44,26 @@ int main()
 
     return 0;
 }
+
+// This logic also works.....
+/* 
+int ss=0;
+    int j;
+    for (int i = 1; i < v.size(); i++)
+    {
+        int val=v[i];
+        for(j=ss; j>=0; j--)
+        {
+            if( v[j]>val )
+            {
+                v[j+1]=v[j];
+            }
+            else
+            {
+                break;
+            }
+        }
+        v[j+1]=val;
+        ss++;
+    }
+    */
