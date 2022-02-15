@@ -11,9 +11,16 @@ void reverse(string &s,int i,int j)
     }
     swap(s[i],s[j]);
     i++; j--;
-    // cout<<s<<endl;
-    // reverse(s,i,j);
-    reverse(s,i,s.size()-1-i);
+    reverse(s,i,j);
+    
+//     if (i > s.size() - 1 - i)
+//     {
+//         return;
+//     }
+//     swap(s[i], s[s.size() - 1 - i]);
+//     i++;
+
+//     reverse(s, i, s.size() - 1 - i);
 
 }
 
