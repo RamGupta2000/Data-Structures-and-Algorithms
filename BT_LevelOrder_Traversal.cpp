@@ -42,13 +42,9 @@ void LevelOrderTraversal(Node *root)
         q.pop();
         if (newnode == NULL)
         {
-            if (q.empty())
+            cout << endl;
+            if (!q.empty())
             {
-                break;
-            }
-            else
-            {
-                cout << endl;
                 q.push(NULL);
             }
         }
@@ -70,8 +66,8 @@ void LevelOrderTraversal(Node *root)
 
 int main()
 {
-    list<int> l = {5, 7, 1, -1, -1, 3, 5, -1, -1, -1, 6, 7, -1, -1, -1};
-    // list<int> l = {1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1};
+    // list<int> l = {5, 7, 1, -1, -1, 3, 5, -1, -1, -1, 6, 7, -1, -1, -1};
+    list<int> l = {1, 2, 4, -1, -1, 5, -1, -1, 3, 6, -1, -1, 7, -1, -1};
 
     Node *root = NULL;
     root = createTree(l);
