@@ -21,7 +21,7 @@ Node *createTree()
     cin >> x;
     Node *newnode = new Node(x);
 
-    if (newnode->data == 0)
+    if (newnode->data == -1)
     {
         return 0;
     }
