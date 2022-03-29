@@ -9,7 +9,7 @@ class Solution
 public:
     vector<int> topK(vector<int> &nums, int k)
     {
-        unordered_map<int, int> mp{10};
+        unordered_map<int, int> mp;
         for (int i = 0; i < nums.size(); i++)
         {
             mp[nums[i]]++;
