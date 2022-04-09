@@ -3,11 +3,11 @@ using namespace std;
 
 void Merge(vector<int> &v, int lb, int mid, int ub)
 {
+    int k = 0;
     int i = lb;
     int j = mid + 1;
-    int k = lb;
 
-    vector<int> arr(v.size());
+    vector<int> arr(ub-lb+1);
 
     while (i <= mid && j <= ub)
     {
@@ -30,9 +30,9 @@ void Merge(vector<int> &v, int lb, int mid, int ub)
         arr[k++] = v[j++];
     }
 
-    for (int i = lb; i < k; i++)
+    for (int i = lb; i <=ub; i++)
     {
-        v[i] = arr[i];
+        v[i] = arr[i-lb];
     }
 }
 
