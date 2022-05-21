@@ -1,38 +1,35 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
 class Solution
 {
 public:
-    void sort(vector<int> adj[], stack<int> &s, vector<int> &vis, int i)
-    {
-        vis[i] = 1;
-        for (auto it : adj[i])
-        {
-            if (!vis[it])
-            {
-                sort(adj, s, vis, it);
-            }
-        }
-        s.push(i);
-    }
     vector<int> topoSort(int v, vector<int> adj[])
     {
         vector<int> ans;
-        vector<int> vis(v, 0);
-        stack<int> s;
+
+        vector<int> indegree(v, 0);
         for (int i = 0; i < v; i++)
+            for (auto it : adj[i])
+                indegree[it]++;
+
+        queue<int> q;
+        for (int i = 0; i < v; i++)
+            if (indegree[i] == 0)
+                q.push(i);
+
+        while (!q.empty())
         {
-            if (!vis[i])
+            int node = q.front();
+            q.pop();
+            ans.push_back(node);
+
+            for (auto it : adj[node])
             {
-                sort(adj, s, vis, i);
+                indegree[it]--;
+                if (indegree[it] == 0)
+                    q.push(it);
             }
-        }
-        while (!s.empty())
-        {
-            ans.push_back(s.top());
-            s.pop();
         }
         return ans;
     }
