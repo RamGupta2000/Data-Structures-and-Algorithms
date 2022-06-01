@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int toh(int n, int src, int dst, int help )
+int toh(int n, int src, int dst, int help)
 {
     static int count = 0;
     if (n == 0)
@@ -18,6 +18,6 @@ int main()
 {
     int n;
     cin >> n;
-    cout<<"Number of moves made : "<<toh(n, 1, 3, 2);
+    cout << "Number of moves made : " << toh(n, 1, 3, 2);
     return 0;
 }
